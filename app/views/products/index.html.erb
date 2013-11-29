@@ -1,4 +1,12 @@
-<p>test</p>
+<!--<p>test</p>-->
+<h1>Manga Store</h1>
+
+<ul>
+  <%@categories.each do |category|%>
+  <li><%=  category.name%></li>
+  <%end%>
+</ul>
+
 <% @products.each do |product| %>
 <p>
   <%= product.name %>
