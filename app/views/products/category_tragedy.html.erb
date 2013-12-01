@@ -1,0 +1,23 @@
+<!--<p>test</p>-->
+
+<ul>
+  <%@categories.each do |category|%>
+  <li><%= link_to "#{category.name}", "#{category.name.downcase}" %></li>
+  <%end%>
+</ul>
+
+<% @products.each do |product| %>
+
+  <% if product.category == "Tragedy" %>
+
+    <p>
+      <%= product.name %>
+    </p>
+     <%= image_tag "#{product.image}" %>
+     <ul>
+      <li>Price: $<%= product.price %></li>
+      <li>Category: <%= product.category %></li>
+      <li>Description: <%= product.description %></li>
+     </ul>
+  <%end%>
+<%end%>

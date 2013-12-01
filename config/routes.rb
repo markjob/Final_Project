@@ -4,6 +4,12 @@ FinalProject::Application.routes.draw do
   
   root :to => "products#index", :via => :get
 
+  match '/action' => "products#category_action", :as => 'category_action', :via => :get
+  match '/educational' => "products#category_educational", :as => 'category_educational', :via => :get
+  match '/comedy' => "products#category_comedy", :as => 'category_comedy', :via => :get
+  match '/slice_of_life' => "products#category_slice_of_life", :as => 'category_slice_of_life', :via => :get
+  match '/tragedy' => "products#category_tragedy", :as => 'category_tragedy', :via => :get
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,9 +1,9 @@
 <!--<p>test</p>-->
-<h1>Manga Store</h1>
+
 
 <ul>
   <%@categories.each do |category|%>
-  <li><%=  category.name%></li>
+  <li><%= link_to "#{category.name}", "#{category.name.downcase}" %></li>
   <%end%>
 </ul>
 
@@ -11,4 +11,10 @@
 <p>
   <%= product.name %>
 </p>
+ <%= image_tag "#{product.image}" %>
+ <ul>
+  <li>Price: $<%= product.price %></li>
+  <li>Category: <%= product.category %></li>
+  <li>Description: <%= product.description %></li>
+ </ul>
 <%end%>
