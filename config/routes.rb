@@ -9,6 +9,8 @@ FinalProject::Application.routes.draw do
   match '/comedy' => "products#category_comedy", :as => 'category_comedy', :via => :get
   match '/slice_of_life' => "products#category_slice_of_life", :as => 'category_slice_of_life', :via => :get
   match '/tragedy' => "products#category_tragedy", :as => 'category_tragedy', :via => :get
+  
+  
   match '/search' => "products#search", :as => 'search', :via => :get
   match '/search_results' => "products#search_results", :as => 'search_results', :via => :post
   
