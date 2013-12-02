@@ -1,6 +1,7 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$skew_amount: -10deg;
 header
 {
     h1
@@ -11,7 +12,7 @@ header
     
     h1:hover
     {
-        transform: skewX(-10deg);
+        transform: skewX($skew_amount);
     }
     
 }
