@@ -34,4 +34,12 @@ class ProductsController < ApplicationController
     @products = Product.all
     @categories = Category.all
   end
+  
+  def search
+    #code
+  end
+  
+  def search_results
+    #code
+  end
 end
