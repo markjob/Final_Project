@@ -42,5 +42,6 @@ class ProductsController < ApplicationController
   def search_results
     #code
     @products = Product.where("Name LIKE ?", "%#{params[:keywords]}%")
+    @products = @products.order(:name)
   end
 end
