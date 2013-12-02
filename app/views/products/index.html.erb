@@ -1,11 +1,14 @@
 <!--<p>test</p>-->
 
 
-<ul>
+<nav>
   <%@categories.each do |category|%>
-  <li><%= link_to "#{category.name}", "#{category.name.downcase}" %></li>
+  <%= link_to "#{category.name}", "#{category.name.downcase}" %>
   <%end%>
-</ul>
+</nav>
+
+<br />
+<br />
 
 <% @products.each do |product| %>
 <p>
