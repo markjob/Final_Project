@@ -1,6 +1,9 @@
 <h2>Product Search</h2>
 
 <%= form_tag search_results_path do %>
+  <%= check_box_tag :categories, value = "1", checked = false %>
+  <label for="categories">Search by Category</label>
+  <br />
   <%= text_field_tag :keywords %>
   <%= submit_tag 'Search' %>
 <% end %>

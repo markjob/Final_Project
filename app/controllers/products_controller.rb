@@ -41,7 +41,15 @@ class ProductsController < ApplicationController
   
   def search_results
     #code
-    @products = Product.where("Name LIKE ?", "%#{params[:keywords]}%")
-    @products = @products.order(:name)
+    begin
+      if Product.find(params[:categories]) != 1
+        #render :text => "This is the output text"
+        @products = Product.where("Category LIKE ?", "%#{params[:keywords]}%")
+        @products = @products.order(:name)
+      end
+    rescue  
+      @products = Product.where("Name LIKE ?", "%#{params[:keywords]}%")
+      @products = @products.order(:name)
+    end
   end
 end
