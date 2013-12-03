@@ -52,4 +52,8 @@ class ProductsController < ApplicationController
       @products = @products.order(:name)
     end
   end
+  
+  def buy
+    @product = Product.find(params[:id])
+  end
 end
