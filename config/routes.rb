@@ -15,6 +15,8 @@ FinalProject::Application.routes.draw do
   match '/search_results' => "products#search_results", :as => 'search_results', :via => :post
   
   match '/products/:id' => 'products#buy', :as => 'product', :via => :get
+  
+  match '/contact' => 'products#contact', :as => 'contact', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
