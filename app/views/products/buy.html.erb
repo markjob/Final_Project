@@ -1,1 +1,10 @@
 <p>test</p>
+<p>
+  <%= @product.name %>
+</p>
+  <%= image_tag "#{@product.image}" %>
+  <ul>
+    <li>Price: $<%= @product.price %></li>
+    <li>Category: <%= @product.category %></li>
+    <li>Description: <%= @product.description %></li>
+  </ul>

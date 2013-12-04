@@ -53,6 +53,7 @@ class ProductsController < ApplicationController
   end
   
   def buy
+    @order = Order.new(params[:product])
     @product = Product.find(params[:id])
   end
   
